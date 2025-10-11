@@ -1,0 +1,287 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+         rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+        <title>Gradistry</title>
+
+        <style>
+          .dm-serif-text-regular {
+            font-family: "DM Serif Text", serif;
+            font-weight: 400;
+            font-style: normal;
+          }
+
+          .dm-serif-text-regular-italic {
+            font-family: "DM Serif Text", serif;
+            font-weight: 400;
+            font-style: italic;
+          }
+          .button-class{
+            background-color: #50223C;
+            color: white;
+            border-radius: 10px;
+            border:none;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+          }
+          .button-class:hover{
+            background-color: #9c587f;
+          }
+
+        </style>
+        
+
+    </head>
+    <body>
+     <nav class="navbar navbar-expand-lg" style="background-color: #50223C !important; padding-bottom:20px; padding-top:20px;">
+      <div class="container-fluid">
+        <a class="navbar-brand dm-serif-text-regular mt-3" href="#" style="font-size: 50px;color: #f5f5f5;">Gradistry</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          style="background-color: white"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+          <ul class="navbar-nav mb-2 mb-lg-0 mt-3">
+            <li class="nav-item">
+              <a class="nav-link dm-serif-text-regular" href="index.html" style="font-size: 25px; color: #f5f5f5;">Home</a>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <span class="vr mx-3"></span>
+            </li>
+
+          
+          
+            <li class="nav-item">
+              <a class="nav-link dm-serif-text-regular" href="gpa.html" style="font-size:25px;color:#f5f5f5">GPA Guide</a>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <span class="vr mx-3"></span>
+            </li>
+
+           
+ 
+            <li class="nav-item">
+              <li class="nav-item">
+                  <a class="nav-link dm-serif-text-regular" href="about.html" style="font-size: 25px; color:#f5f5f5;">About</a>
+                </li>
+                     </ul>
+        </div>
+      </div>
+  </nav>
+   <div style="border: 2px solid black " class="dm-serif-text-regular-italic"><h1 style="text-align: center;">Calculate. Track. Thrive.</h1></div>
+   <div class="container mt-5" style="background-color:#50223C; border-radius: 10px;">
+    <p style="color: white; font-size: 30px; " class="dm-serif-text-regular">Gradistry helps students calculate and track their GPA with precision, ease, and style. 
+    Whether you're planning for college or just keeping tabs on performance, we’ve got you covered.</p>
+   </div>
+   <div class="container dm-serif-text-regular" style="text-align: center;text-decoration: underline; margin-top: 8rem; "><p style="font-size: 70px;">Testimonials</p></div>
+   
+   <div class="container dm-serif-text-regular-italic" id="quote-box" style="text-align: center;margin-top: 0; width:80%;height:auto; padding:20px;font-size:40px;border: 3px solid black;">
+
+   </div>
+<div class="container dm-serif-text-regular border border-dark" 
+     style="background-color: #F2EDF2; margin-top:100px;margin-bottom: 90px;border-radius: 10px;width:80%">
+
+  <h1 style="text-align: center;text-decoration: underline;">GPA calculator</h1>
+
+  <div class="row">
+    <!-- Left column: Inputs -->
+    <div class="col-md-6">
+      <label for="gpaType" style="font-size: 30px;">Choose GPA type:</label><br>
+      <select id="gpaType" name="gpaType">
+        <option disabled selected value="">--GPA Type--</option>
+        <option value="weighted">Weighted</option>
+        <option value="unweighted">Unweighted</option>
+      </select>
+      <br><br>
+
+      <label for="courseLevel" style="font-size: 30px;">Select Course Level:</label><br>
+      <select id="courseLevel" name="courseLevel">
+        <option disabled selected value="">--Course Level--</option>
+        <option value="regular">Regular</option>
+        <option value="honors">Honors</option>
+        <option value="AP">AP</option>
+      </select>
+      <br><br>
+
+      <p style="font-size: 30px;">Enter Course Name :</p>
+      <input id="course" placeholder="Course"><br><br>
+
+      <label for="grade" style="font-size: 30px;">Select Grade:</label><br>
+      <select id="grade" name="grade">
+        <option disabled selected value="">--Select Grade--</option>
+        <option value="A+">A+</option>
+        <option value="A">A</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B">B</option>
+        <option value="B-">B-</option>
+        <option value="C+">C+</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="F">F</option>
+      </select><br><br>
+
+      <p style="font-size: 30px;">Enter Credit Received: </p>
+      <input type="number" id="credit" placeholder="Credit"><br><br><br>
+
+      <button class="button-class" onclick="addCourse()" style="margin-bottom: 5%;">Add Course</button>
+      <button class="button-class" onclick="gpaCalc()" style="margin-bottom: 5%; margin-left: 3%;">Calculate GPA</button>
+    </div>
+
+    
+    <div class="col-md-6 d-flex justify-content-center align-items-start">
+      <table id="previewTable" border="1" style="margin-top:50px;width:80%; text-align:center;" class="table table-bordered">
+        <thead>
+          <tr>
+            <th style="background-color: #50223C; color: white;">Course</th>
+            <th style="background-color: #50223C; color: white;">Level</th>
+            <th style="background-color: #50223C; color: white;">Grade</th>
+            <th style="background-color: #50223C; color: white;">Credits</th>
+          </tr>
+        </thead>
+        <tbody style="background-color: white"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+  <div class="container dm-serif-text-regular-italic" style="margin-bottom:5%; margin-left:33.5%">
+   
+  </div>
+
+   <script>
+    let Array=[]
+    let myQuotes=['Gradistry made GPA tracking effortless.','Finally, a calculator that doesn’t look like it’s from 2005.','I stopped guessing my GPA. Thanks Gradistry!','This site lowkey saved my academic life.']
+    let index = 0;
+          let gradeToPoint = {
+        "A+": 4.0,
+        "A": 4.0,
+        "A-": 3.7,
+        "B+": 3.3,
+        "B": 3.0,
+        "B-": 2.7,
+        "C+": 2.3,
+        "C": 2.0,
+        "D": 1.0,
+        "F": 0.0
+      };
+
+    function rotateQuotes() {
+    const quoteBox = document.getElementById("quote-box");
+    quoteBox.textContent = myQuotes[index];
+    index = (index + 1) % myQuotes.length; // Loop back to 0 when done
+    }
+
+// Start rotating every 3 seconds
+    setInterval(rotateQuotes, 3000);
+
+// Optional: Show first quote immediately
+    rotateQuotes();
+
+    function addCourse(){
+      
+      const gType=document.getElementById("gpaType").value
+      const cLevel=document.getElementById("courseLevel").value
+      const cName=document.getElementById("course").value
+      const gra=document.getElementById("grade").value
+      const crd=document.getElementById("credit").value
+      Array.push({gType,cLevel,cName,gra,crd})
+      
+      if (!gType || !cLevel || !cName || !gra || !crd) {
+        alert("Please fill in all fields before adding.");
+        return;
+      }
+
+      gra2=gradeToPoint[gra]
+      if (gType=="unweighted"){
+        gra2+=0
+
+      }
+
+      else if(gType=="weighted"){
+        if (cLevel=="regular"){
+          gra2+=0
+          
+          
+        }
+        else if(cLevel=="honors"){
+          gra2+=0.5
+        }
+        else if(cLevel=="AP"){
+          gra2+=1.0
+        }
+
+
+      }
+
+      const tableBody = document.getElementById("previewTable").querySelector("tbody");
+      const row = tableBody.insertRow();
+
+      row.insertCell(0).textContent = cName;
+      row.insertCell(1).textContent = cLevel;
+      row.insertCell(2).textContent = gra;
+      row.insertCell(3).textContent = crd;
+
+      
+      document.getElementById("course").value = "";
+      document.getElementById("grade").value = "";
+      document.getElementById("credit").value = "";
+     }
+
+    function gpaCalc() {
+      if (Array.length === 0) {
+        alert("No courses added yet!");
+      return;
+      }
+      
+
+
+      let totalPoints = 0;
+      let totalCredits = 0;
+
+      Array.forEach(course => {
+      let gradeValue=gradeToPoint[course.gra]; 
+      let weightedGrade=gradeValue;
+      if(course.gType==="weighted"){
+        if (course.cLevel === "honors") weightedGrade+=0.5;
+        else if (course.cLevel === "AP") weightedGrade+=1.0
+      }
+      
+      totalPoints += weightedGrade * parseFloat(course.crd);
+      totalCredits += parseFloat(course.crd);
+      });
+
+     let gpa = totalPoints / totalCredits;
+
+     alert("Your GPA is: " + gpa.toFixed(2));
+    }
+
+
+
+
+
+    
+
+
+   </script>
+
+   
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+ </body>
+</html>
