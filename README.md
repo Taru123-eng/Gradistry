@@ -24,6 +24,8 @@ Gradistry was developed to simplify academic performance tracking for students. 
 
 Visit the live website here:  
 [🔗 https://gradistry.netlify.app/](https://gradistry.netlify.app/)
+> **Note:** Gradistry is optimized for **Google Chrome**. Certain functions may not display or calculate correctly on other browsers.
+
 
 ## 🛠️ Tech Stack
 
