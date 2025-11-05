@@ -23,7 +23,7 @@ Gradistry was developed to simplify academic performance tracking for students. 
 ##  Live Demo
 
 Visit the live website here:  
-[🔗 https://gradistry.netlify.app/](https://taru123-eng.github.io/gradistry-site)  
+[🔗 https://gradistry.netlify.app/](https://gradistry.netlify.app/)
 
 ## 🛠️ Tech Stack
 
